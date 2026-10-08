@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111318">
+  <title>11 параллель — Tier List</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <div class="eyebrow">11 ПАРАЛЛЕЛЬ</div>
+      <h1>Beauty Tier List</h1>
+    </div>
+    <button id="resultsBtn" class="ghost-btn">Результаты</button>
+  </header>
+
+  <main class="container">
+    <section class="notice">
+      <span>🔒</span>
+      <div>
+        <strong>Анонимное голосование</strong>
+        <p>Другие участники не увидят, кому ты поставил какой тир.</p>
+      </div>
+    </section>
+
+    <section class="mode-switch">
+      <button class="mode active" data-mode="tier">Tier List</button>
+      <button class="mode" data-mode="cards">По одному</button>
+    </section>
+
+    <section id="tierView">
+      <div class="tier-row s"><div class="tier-label">S</div><div class="tier-items" data-tier="S"></div></div>
+      <div class="tier-row a"><div class="tier-label">A</div><div class="tier-items" data-tier="A"></div></div>
+      <div class="tier-row b"><div class="tier-label">B</div><div class="tier-items" data-tier="B"></div></div>
+      <div class="tier-row c"><div class="tier-label">C</div><div class="tier-items" data-tier="C"></div></div>
+      <div class="tier-row d"><div class="tier-label">D</div><div class="tier-items" data-tier="D"></div></div>
+    </section>
+
+    <section class="pool-section">
+      <div class="section-title">Не распределены</div>
+      <div id="pool" class="pool"></div>
+    </section>
+
+    <button id="submitBtn" class="primary-btn">Отправить голосование</button>
+
+    <section id="cardView" class="card-view hidden">
+      <div class="progress"><span id="progressText">1 / 0</span></div>
+      <div id="singleCard"></div>
+      <div class="tier-buttons">
+        <button data-tier="S">S</button>
+        <button data-tier="A">A</button>
+        <button data-tier="B">B</button>
+        <button data-tier="C">C</button>
+        <button data-tier="D">D</button>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="resultsDialog">
+    <div class="dialog-inner">
+      <button class="close" id="closeResults">×</button>
+      <div class="eyebrow">СТАТИСТИКА</div>
+      <h2>Результаты</h2>
+      <p id="resultSummary">Пока голосование не опубликовано.</p>
+      <div id="resultList"></div>
+    </div>
+  </dialog>
+
+  <script src="./app.js"></script>
+</body>
+</html>
